@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ayuda · Canalfly IPTV</title>
+  <meta name="description" content="Guía de configuración y preguntas frecuentes de Canalfly IPTV.">
+  <link rel="icon" href="img/icon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a class="brand" href="index.html"><img src="img/icon.png" alt=""><span>Canalfly IPTV</span></a>
+      <nav><a href="soporte.html">Ayuda</a><a href="privacidad.html">Privacidad</a></nav>
+    </header>
+
+    <h1>Ayuda</h1>
+
+    <h2>Configurar tu lista</h2>
+    <h3>Con el móvil (recomendado)</h3>
+    <ol>
+      <li>Conecta el móvil a la misma Wi-Fi que la tele.</li>
+      <li>En la tele, en la pantalla de inicio de sesión, escanea el código QR con la cámara del móvil.</li>
+      <li>Elige <em>Xtream Codes</em> o <em>Lista M3U</em>, rellena los datos y pulsa Enviar. La tele se conecta sola.</li>
+    </ol>
+    <p>El formulario lo sirve la propia tele: tus datos no pasan por internet ni por nuestros servidores.</p>
+
+    <h3>Con el mando</h3>
+    <ul>
+      <li><strong>Xtream Codes:</strong> servidor (por ejemplo <code>http://servidor:8080</code>), usuario y contraseña. Opcional: URL de una guía XMLTV.</li>
+      <li><strong>M3U:</strong> la URL completa de la lista (<code>http://…/lista.m3u</code>). Opcional: guía XMLTV.</li>
+    </ul>
+
+    <h2>Mando</h2>
+    <table>
+      <tr><th>Tecla</th><th>En el reproductor</th></tr>
+      <tr><td>CH+ / CH− (⏩ / ⏪ en Fire TV), ▲ / ▼</td><td>Canal siguiente / anterior</td></tr>
+      <tr><td>Números</td><td>Ir al canal por número</td></tr>
+      <tr><td>OK</td><td>Información del canal; en películas, pausa</td></tr>
+      <tr><td>◀ / ▶</td><td>Lista lateral de canales; en películas, −10 s / +30 s</td></tr>
+      <tr><td>Atrás</td><td>Volver al canal anterior; pulsación larga, salir a la lista</td></tr>
+      <tr><td>Rojo / Menú</td><td>Añadir o quitar de favoritos; en películas, audio y subtítulos</td></tr>
+    </table>
+
+    <h2>Preguntas frecuentes</h2>
+    <details><summary>¿Canalfly IPTV incluye canales?</summary><p>No. Es un reproductor: solo muestra la lista que tú añades de tu proveedor. No vendemos ni recomendamos listas.</p></details>
+    <details><summary>Un canal no carga o se corta</summary><p>La app reintenta sola. Si el mensaje dice que el servidor de tu lista no responde, el problema es del proveedor: prueba otro canal o contacta con él. En Ajustes puedes cambiar el formato del stream (TS/HLS) y el tamaño del búfer.</p></details>
+    <details><summary>«Usuario o contraseña incorrectos» o «Cuenta caducada»</summary><p>Revisa los datos con tu proveedor. Esos mensajes los devuelve su servidor.</p></details>
+    <details><summary>Solo puedo ver en un dispositivo a la vez</summary><p>Muchas cuentas permiten una sola conexión simultánea. Si la usas en otro aparato, la tele no podrá reproducir hasta que lo cierres.</p></details>
+    <details><summary>No veo la guía de programación</summary><p>Depende de tu proveedor. Si no la ofrece, añade la URL de una guía XMLTV al crear la lista; la app la descarga y la empareja con tus canales.</p></details>
+    <details><summary>¿Cómo oculto contenido para adultos?</summary><p>Ajustes › Control parental: crea un PIN de 4 cifras. Las categorías de adultos se ocultan y puedes bloquear otras con el botón rojo.</p></details>
+    <details><summary>¿Dónde se guardan mis datos?</summary><p>Solo en tu tele. Al desinstalar la app se borran. Más detalles en la <a href="privacidad.html">política de privacidad</a>.</p></details>
+
+    <h2>Probar sin lista propia</h2>
+    <p>Para ver cómo funciona la app, añade como lista M3U esta demostración con vídeos de licencia libre (Big Buck Bunny, Sintel y Tears of Steel, © Blender Foundation, CC BY) y streams públicos de prueba:</p>
+    <p><code>https://sergigd.github.io/canalfly-web/demo.m3u</code></p>
+
+    <h2>Contacto</h2>
+    <p>Escríbenos a <a href="mailto:sergi.gd.98@gmail.com">sergi.gd.98@gmail.com</a>. Respondemos en menos de 48 horas laborables. Indica tu modelo de tele y la versión de la app (Ajustes › Acerca de). Nunca te pediremos tu contraseña.</p>
+
+    <footer>
+      © 2026 Kavoro · <a href="privacidad.html">Privacidad</a> · <a href="index.html">Inicio</a>
+    </footer>
+  </div>
+</body>
+</html>
