@@ -19,7 +19,7 @@
     <p>Última actualización: noviembre de 2026. Responsable: Kavoro (contacto: <a href="mailto:soporte@kavoro.dev">soporte@kavoro.dev</a>).</p>
 
     <h2>Resumen</h2>
-    <p>Canalfly IPTV guarda tus datos solo en tu televisor. No tenemos servidores que reciban tus credenciales, tu lista ni lo que ves. No hay anuncios, rastreadores ni analítica.</p>
+    <p>Canalfly IPTV guarda tus datos solo en tu televisor. Ningún servidor nuestro puede leer tus credenciales, tu lista ni lo que ves: si usas el QR, los datos pasan por nuestro servidor solo cifrados para tu tele y se borran en cuanto la tele los recoge (como mucho, a los 10 minutos). No hay anuncios, rastreadores ni analítica.</p>
 
     <h2>Qué datos trata la app y dónde se guardan</h2>
     <table>
@@ -33,12 +33,16 @@
     </table>
 
     <h2>Inicio de sesión con el móvil (QR)</h2>
-    <p>Al mostrar el código QR, la tele abre durante un máximo de 15 minutos un pequeño formulario solo accesible desde tu red local, con una dirección aleatoria. Lo que escribes en el móvil viaja directamente a la tele por tu Wi-Fi; no pasa por internet ni por servidores nuestros. El formulario se cierra al recibir los datos o al salir de esa pantalla.</p>
+    <p>Desde la versión 1.0.9, al mostrar el código QR la tele crea un par de claves cuya parte privada nunca sale de ella, y pone su clave pública en el código. El formulario del móvil (<code>pair.kavoro.dev</code>) cifra lo que escribes con esa clave <strong>antes de enviarlo</strong>. Nuestro servidor solo guarda ese mensaje cifrado, que no puede leer, hasta que la tele lo recoge: se borra al entregarlo o, si nadie lo recoge, a los 10 minutos. Las copias de seguridad automáticas del proveedor pueden conservar ese mensaje cifrado hasta 30 días, pero sin la clave de la tele, que se destruye al salir de la pantalla, es ilegible. La tele no se conecta sola: te enseña a qué servidor va a conectarse y espera a que pulses «Entrar».</p>
+    <p>Para funcionar y para evitar abusos (limitar cuántas peticiones llegan desde una misma dirección), el servidor trata la dirección IP del móvil y de la tele y la hora de la conexión. No las guardamos en registros ni las usamos para nada más. La tele deja de consultar a los 20 minutos, al salir de esa pantalla o al pasar la app a segundo plano.</p>
+    <p>El servidor funciona sobre Cloudflare (Cloudflare, Inc.), que actúa como encargado del tratamiento con sus propias garantías para transferencias internacionales (cláusulas contractuales tipo de la UE). Usa este formulario solo con el código que muestra tu propia tele.</p>
+    <p>En versiones anteriores, el código QR abría un formulario solo accesible desde tu red local: lo que escribías en el móvil viajaba directamente a la tele por tu Wi-Fi, sin pasar por internet ni por servidores nuestros.</p>
 
     <h2>Conexiones que hace la app</h2>
     <ul>
       <li>A tu proveedor IPTV, con los datos que tú introduces, para cargar la lista y reproducir.</li>
       <li>A la guía XMLTV que configures, si lo haces.</li>
+      <li>A <code>pair.kavoro.dev</code>, solo mientras la pantalla del QR está abierta, para recoger los datos cifrados del móvil.</li>
     </ul>
     <p>Tu proveedor y la web de la guía tienen sus propias políticas de privacidad. Canalfly IPTV no tiene relación con ningún proveedor.</p>
 
